@@ -6,7 +6,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 function Card({width,srart,para,hover="false"}) {
   
   return (
-    <motion.div whileHover={{backgroundColor: hover === "true" && "#7443ff", padding: '30px'}} className={`p-5 rounded-xl bg-zinc-800 ${width} min-h-[30rem] flex flex-col justify-between `}>
+    <motion.div  whileHover={{backgroundColor: hover === "true" && "#7443ff", padding: '30px'}} className={`p-5 z-100 rounded-xl bg-zinc-800 ${width} min-h-[30rem] flex flex-col justify-between `}>
         <div className='w-full'> 
         <div className='w-full flex justify-between items-center'>
             <h3>one heading</h3>
