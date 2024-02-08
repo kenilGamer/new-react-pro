@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from 'react'
-import Button from './button'
+import Button from './Button'
 
 function Produt({val,mover,index}) {
   return (
