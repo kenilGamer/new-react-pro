@@ -3,25 +3,42 @@ import React, { useRef, useEffect } from 'react';
 
 const CanvasAnimation = () => {
   const canvasRef = useRef(null);
+  const particles = [];
+  const mouseTrail = [];
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-    let particles = [];
 
     const handleMouseMove = (event) => {
       const mouseX = event.clientX;
       const mouseY = event.clientY;
 
-      for (let i = 0; i < 5; i++) {
+      const particleCount = Math.random() * 2 + 1;
+
+      for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: mouseX,
           y: mouseY,
           radius: Math.random() * 2 + 1,
-          color: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`,
+          color: getRandomColor(),
           speedX: (Math.random() - 0.5) * 3,
           speedY: (Math.random() - 0.5) * 3,
         });
+      }
+
+      // Update mouse trail with random rgba values
+      mouseTrail.push({
+        x: mouseX,
+        y: mouseY,
+        radius: Math.random() * 10 + 1,
+        color: getRandomColor(),
+        opacity: Math.random() * 0.5 + 0.2,
+      });
+
+      // Keep only the last 10 positions for a smooth trail
+      if (mouseTrail.length > 10) {
+        mouseTrail.shift();
       }
     };
 
@@ -32,8 +49,8 @@ const CanvasAnimation = () => {
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
         ctx.fillStyle = particle.color;
-        ctx.shadowBlur = 5 // Add blur effect
-        ctx.shadowColor = particle.color; // Set shadow color
+        ctx.shadowBlur = particle.radius * 5;
+        ctx.shadowColor = particle.color;
         ctx.fill();
 
         particle.x += particle.speedX;
@@ -45,12 +62,28 @@ const CanvasAnimation = () => {
         }
       });
 
+      // Draw the mouse trail
+      mouseTrail.forEach((pos) => {
+        ctx.beginPath();
+        ctx.arc(pos.x, pos.y, pos.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${pos.opacity})`;
+        ctx.fill();
+      });
+
       requestAnimationFrame(animateParticles);
     };
 
     const handleMouseOut = () => {
-      particles.length = 0; // Clear particles on mouseout
+      particles.length = 0;
+      mouseTrail.length = 0;
       ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    };
+
+    const getRandomColor = () => {
+      const randomR = Math.floor(Math.random() * 256);
+      const randomG = Math.floor(Math.random() * 256);
+      const randomB = Math.floor(Math.random() * 256);
+      return `rgba(${randomR}, ${randomG}, ${randomB}, 1)`;
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -80,6 +113,14 @@ const CanvasAnimation = () => {
     };
   }, []);
 
+  // Hide the mouse cursor globally
+  useEffect(() => {
+    document.body.style.cursor = 'none';
+    return () => {
+      document.body.style.cursor = 'auto';
+    };
+  }, []);
+
   return (
     <canvas
       ref={canvasRef}
@@ -88,9 +129,10 @@ const CanvasAnimation = () => {
       style={{
         border: '1px solid #000',
         position: 'fixed',
+        pointerEvents: 'none',
         top: 0,
         left: 0,
-        // zIndex: 1111,
+        zIndex: 1111,
       }}
     ></canvas>
   );
