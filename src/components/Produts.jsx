@@ -1,11 +1,14 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Produt from './Produt';
-
+import Parallax from 'parallax-js';
 import { motion } from 'framer-motion';
 
+
 function Produts() {
+ 
+
   let produts = [
     {
       title: 'Arqitel',
@@ -116,17 +119,17 @@ function Produts() {
     setPos(val*23)
   }
   return (
-    <div className="mt-32 relative">
+    <div className="mt-32 bg-orange-600 relative">
       {produts.map((elem, index) => (
         <Produt key={index} mover={mover} val={elem} index={index} />
       ))}
-      <div className="w-full absolute top-0 h-full pointer-events-none">
+      <div className="w-full absolute top-0 h-full  pointer-events-none">
         <motion.div 
         initial={{y: pos, x: "-50%"}} 
         animate={{y: pos+`rem`}}
         transition={{ ease: [0.76, 0, 0.24, 1], duration:  0.8 }}
-        className="w-[32rem] left-[44%]  absolute h-[23rem] bg-white overflow-hidden">
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-100">
+        className="w-[32rem] left-[44%]  absolute h-[23rem] max-md:w-[18rem]  bg-white lg:overflow-hidden">
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-100 parallax-scene">
             <video src="../../public/videos/Arqitel project video 4_3.webm" autoPlay muted loop></video>
           </motion.div>
           <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-200">
@@ -138,7 +141,7 @@ function Produts() {
           <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-400">
             <video src="../../public/videos/Maniv-Compressed.mp4" autoPlay muted loop></video>
           </motion.div>
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-500">
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-500" >
             <video src="../../public/videos/haufe.webm" autoPlay muted loop></video>
           </motion.div>
           <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-600">
