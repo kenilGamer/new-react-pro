@@ -119,7 +119,7 @@ function Produts() {
     setPos(val*23)
   }
   return (
-    <div className="mt-32 bg-orange-600 relative">
+    <div className="mt-32  relative">
       {produts.map((elem, index) => (
         <Produt key={index} mover={mover} val={elem} index={index} />
       ))}
