@@ -31,7 +31,7 @@ function App() {
   });
 
   return (
-    <div className="w-full bg-zinc-950 text-white relative">
+    <div className="w-full bg-zinc-950 text-white relative max-md:overflow-x-hidden">
       <CanvasAnimation />
       <Navbar />
       <Work />

@@ -12,7 +12,7 @@ function Navbar() {
                 {["Home","Work","culture", "", "NEWS"].map((elem,index) => (
                     elem.length === 0 ? <span key={index} className='w-0.5 h-10 bg-zinc-700'></span> : (
                      <a key={index} href="#">
-                        {index === 1 ? (<span key={index} style={{boxShadow: "0 0 10px 1px #00FF18"}} className='inline-block w-1.5 h-1.5 p-0.5 bg-emerald-400  rounded-full mr-1'></span>) : null}
+                        {index === 1 ? (<span key={index} style={{boxShadow: "0 0 10px 1px #00FF18"}} className=' inline-block w-1.5 h-1.5 p-0.5 bg-emerald-400 max-md:w-0  rounded-full mr-1'></span>) : null}
                      {elem}
                  </a>)
                 ))} 
