@@ -27,7 +27,6 @@ const CanvasAnimation = () => {
         });
       }
 
-      // Update mouse trail with random rgba values
       mouseTrail.push({
         x: mouseX,
         y: mouseY,
@@ -36,10 +35,14 @@ const CanvasAnimation = () => {
         opacity: Math.random() * 0.5 + 0.2,
       });
 
-      // Keep only the last 10 positions for a smooth trail
       if (mouseTrail.length > 10) {
         mouseTrail.shift();
       }
+    };
+
+    const handleTouchMove = (event) => {
+      const touch = event.touches[0];
+      handleMouseMove({ clientX: touch.clientX, clientY: touch.clientY });
     };
 
     const animateParticles = () => {
@@ -62,7 +65,6 @@ const CanvasAnimation = () => {
         }
       });
 
-      // Draw the mouse trail
       mouseTrail.forEach((pos) => {
         ctx.beginPath();
         ctx.arc(pos.x, pos.y, pos.radius, 0, Math.PI * 2);
@@ -87,12 +89,14 @@ const CanvasAnimation = () => {
     };
 
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('touchmove', handleTouchMove);
     window.addEventListener('mouseout', handleMouseOut);
 
     animateParticles();
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('touchmove', handleTouchMove);
       window.removeEventListener('mouseout', handleMouseOut);
     };
   }, []);
@@ -107,13 +111,14 @@ const CanvasAnimation = () => {
     resizeCanvas();
 
     window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('orientationchange', resizeCanvas);
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('orientationchange', resizeCanvas);
     };
   }, []);
 
-  // Hide the mouse cursor globally
   useEffect(() => {
     document.body.style.cursor = 'none';
     return () => {
