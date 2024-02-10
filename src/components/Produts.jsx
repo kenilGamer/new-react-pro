@@ -129,50 +129,50 @@ function Produts() {
         animate={{y: pos+`rem`}}
         transition={{ ease: [0.76, 0, 0.24, 1], duration:  0.8 }}
         className="w-[32rem] left-[44%]  absolute h-[23rem] max-md:w-[18rem]  bg-white lg:overflow-hidden">
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-100 parallax-scene">
-            <video src="../../public/videos/Arqitel project video 4_3.webm" autoPlay muted loop></video>
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full xl:bg-sky-100  max-md:relative  parallax-scene">
+            <video  className='top-20 max-md:absolute' src="../../public/videos/Arqitel project video 4_3.webm" autoPlay muted loop></video>
           </motion.div>
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-200">
-            <video src="../../public/videos/Cula_promo_new_4_3.mp4" autoPlay muted loop></video>
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full xl:bg-sky-200  max-md:relative">
+            <video className='top-20 max-md:absolute' src="../../public/videos/Cula_promo_new_4_3.mp4" autoPlay muted loop></video>
           </motion.div>
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-300">
-            <video src="../../public/videos/TTR project video 4_3_H.264.webm" autoPlay muted loop></video>
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full xl:bg-sky-300  max-md:relative">
+            <video className='top-24 max-md:absolute' src="../../public/videos/TTR project video 4_3_H.264.webm" autoPlay muted loop></video>
           </motion.div>
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-400">
-            <video src="../../public/videos/Maniv-Compressed.mp4" autoPlay muted loop></video>
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full xl:bg-sky-400  max-md:relative">
+            <video className='top-28 max-md:absolute' src="../../public/videos/Maniv-Compressed.mp4" autoPlay muted loop></video>
           </motion.div>
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-500" >
-            <video src="../../public/videos/haufe.webm" autoPlay muted loop></video>
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full xl:bg-sky-500  max-md:relative" >
+            <video className='top-32 max-md:absolute' src="../../public/videos/haufe.webm" autoPlay muted loop></video>
           </motion.div>
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-600">
-            <video src="../../public/videos/yahoo.webm" autoPlay muted loop></video>
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full xl:bg-sky-600  max-md:relative">
+            <video className='top-36 max-md:absolute ' src="../../public/videos/yahoo.webm" autoPlay muted loop></video>
           </motion.div>
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-700">
-            <video src="../../public/videos/rainfall.webm" autoPlay muted loop></video>
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full xl:bg-sky-700  max-md:relative">
+            <video className='top-36 max-md:absolute' src="../../public/videos/rainfall.webm" autoPlay muted loop></video>
           </motion.div>
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-800">
-            <video src="../../public/videos/jungle-4-3-.webm" autoPlay muted loop></video>
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full xl:bg-sky-800  max-md:relative">
+            <video className='top-40 max-md:absolute' src="../../public/videos/jungle-4-3-.webm" autoPlay muted loop></video>
           </motion.div>
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-900">
-            <video src="../../public/videos/Silvr.webm" autoPlay muted loop></video>
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full xl:bg-sky-900  max-md:relative">
+            <video className='top-44 max-md:absolute' src="../../public/videos/Silvr.webm" autoPlay muted loop></video>
           </motion.div>
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-100">
-            <video src="../../public/videos/remind.webm" autoPlay muted loop></video>
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full xl:bg-sky-100  max-md:relative">
+            <video className='top-48 max-md:absolute' src="../../public/videos/remind.webm" autoPlay muted loop></video>
           </motion.div>
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-200">
-            <video src="../../public/videos/summon.webm" autoPlay muted loop></video>
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full xl:bg-sky-200  max-md:relative">
+            <video className='top-52 max-md:absolute' src="../../public/videos/summon.webm" autoPlay muted loop></video>
           </motion.div>
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-300">
-            <video src="../../public/videos/weglotlikemagic.webm" autoPlay muted loop></video>
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full xl:bg-sky-300  max-md:relative">
+            <video className='top-56 max-md:absolute' src="../../public/videos/weglotlikemagic.webm" autoPlay muted loop></video>
           </motion.div>
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-400">
-            <video src="../../public/videos/weglot.webm" autoPlay muted loop></video>
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full xl:bg-sky-400  max-md:relative">
+            <video className='top-64 max-md:absolute' src="../../public/videos/weglot.webm" autoPlay muted loop></video>
           </motion.div>
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-500">
-            <video src="../../public/videos/haufe.webm" autoPlay muted loop></video>
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full xl:bg-sky-500  max-md:relative">
+            <video className='top-72 max-md:absolute' src="../../public/videos/haufe.webm" autoPlay muted loop></video>
           </motion.div>
-          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full bg-sky-600">
-            <video src="../../public/videos/yearinreview.webm" autoPlay muted loop></video>
+          <motion.div transition={{ ease: [0.76, 0, 0.24, 1], duration:  1 }} animate={{y: -pos +`rem`}} className="w-full h-full xl:bg-sky-600  max-md:relative">
+            <video className='top-72 max-md:absolute' src="../../public/videos/yearinreview.webm" autoPlay muted loop></video>
           </motion.div>
         </motion.div>
       </div>
