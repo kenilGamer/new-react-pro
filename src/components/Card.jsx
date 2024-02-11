@@ -9,10 +9,30 @@ function Card({width,srart,para,hover="false"}) {
     <motion.div  whileHover={{backgroundColor: hover === "true" && "#7443ff", padding: '30px'}} className={`p-5 z-100 rounded-xl bg-zinc-800 ${width} min-h-[30rem] flex flex-col justify-between `}>
         <div className='w-full'> 
         <div className='w-full flex justify-between items-center'>
-            <h3>one heading</h3>
+        {srart && (
+            <>
+              <h3>Get in Touch</h3>
+              <IoIosArrowRoundForward />
+            </>
+            )}
+           {para === true && (
+            <>
+              <h3>Up Next: New </h3>
         <IoIosArrowRoundForward />
+            </>
+            )}
+
         </div>
-        <h1 className='text-2xl font-medium'>whyd</h1>
+        {srart && (
+            <>
+        <h1 className=' mt-10 text-4xl font-medium'>Let`s get to it, together.</h1>
+            </>
+            )}
+           {para === true && (
+            <>
+            <h1 className=' mt-10 text-4xl font-medium'>Insights and behind the scenes</h1>
+            </>
+            )}
         </div>
         <div className='down w-full '>
             {srart && (
@@ -23,7 +43,8 @@ function Card({width,srart,para,hover="false"}) {
             )}
            {para === true && (
                 <>
-                 <p className='text-sm text-zinc-600 font-medium'>Lorem ipsum dolor sit amet consectetur.</p>
+                {/* <h3>ddddd</h3> */}
+                 <p className='text-sm text-zinc-600 font-medium'>Explor what drives our team.</p>
             </>
             )}
            
